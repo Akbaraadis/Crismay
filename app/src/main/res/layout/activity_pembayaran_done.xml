@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pembayaran.PembayaranDoneActivity"
+    android:background="@color/grey_soft">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/pmbd_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextItemTop"
+            android:text="CRISMAY"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="15dp"/>
+
+        <View
+            android:id="@+id/pmbd_line1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_header"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/pmbd_check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_baseline_check_circle_outline_24"
+            app:layout_constraintBottom_toBottomOf="@id/pmbd_check2"
+            app:layout_constraintTop_toTopOf="@id/pmbd_check2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_check2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaksi Berhasil"
+            style="@style/TextItemDetail"
+            app:layout_constraintBottom_toBottomOf="@id/pmbd_line1"
+            app:layout_constraintStart_toEndOf="@id/pmbd_check"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Transaksi"
+            style="@style/TextItemDetail"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_line1"
+            app:layout_constraintStart_toStartOf="@id/pmbd_line1"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            style="@style/TextItemDetail"
+            app:layout_constraintStart_toStartOf="@id/pmbd_line1"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_detail"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_keterangan"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Keterangan"
+            style="@style/TextItemDetail"
+            app:layout_constraintStart_toEndOf="@id/pmbd_no"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_detail"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            style="@style/TextItemDetail"
+            app:layout_constraintEnd_toEndOf="@id/pmbd_line1"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_detail"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <FrameLayout
+            android:id="@+id/pmbd_bg"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/blue_soft"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_keterangan"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Bayar"
+            style="@style/TextItemTop"
+            app:layout_constraintStart_toStartOf="@id/pmbd_line1"
+            app:layout_constraintTop_toTopOf="@id/pmbd_bg"
+            android:layout_marginStart="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_total_bayar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 200.000"
+            style="@style/TextItemTop"
+            app:layout_constraintEnd_toEndOf="@id/pmbd_line1"
+            app:layout_constraintTop_toTopOf="@id/pmbd_bg"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_metode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metode Pembayaran"
+            style="@style/TextItemDetail"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_total"
+            app:layout_constraintStart_toStartOf="@id/pmbd_line1"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/pmbd_dana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saldo DANA"
+            style="@style/TextItemDetail"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_total"
+            app:layout_constraintEnd_toEndOf="@id/pmbd_line1"
+            android:layout_marginTop="30dp"/>
+
+        <View
+            android:id="@+id/pmbd_line2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/pmbd_dana"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/pmbd_btn_lanjut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
